@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="principal">Me clica</button>
+    <div id="quadrado">
+
+    </div>
+</body>
+<script>
+    var divQuadrado = document.querySelector("#quadrado");
+    var botao = document.querySelector("#principal");
+
+    botao.onclick = insereElemento;
+
+    function insereElemento() {
+        var quadrado = document.createElement('div');
+        quadrado.style.width = '100px';
+        quadrado.style.height = '100px';
+        quadrado.style.backgroundColor = '#f00';
+
+        divQuadrado.appendChild(quadrado);
+        console.log(quadrado);
+    }
+
+</script>
+</html>
