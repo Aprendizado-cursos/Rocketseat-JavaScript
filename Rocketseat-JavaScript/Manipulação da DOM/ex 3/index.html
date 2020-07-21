@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+    <div id="divCentral">
+
+    </div>
+</body>
+
+<script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    var divCentral = document.querySelector("#divCentral");
+    var input = document.querySelector("input");
+    var botao = document.querySelector("button");
+
+    geraLista();
+
+    function geraLista() {
+        nomes.forEach(i => {
+            let li = document.createElement('li');
+            li.innerHTML = i;
+            divCentral.appendChild(li);
+        });
+    }
+
+    function adicionar() {
+        let valor = input.value;
+        if (valor != "") {
+            let li = document.createElement("li");
+            li.innerHTML = valor;
+            divCentral.appendChild(li);
+        }
+        input.value = "";
+    }
+</script>
+
+</html>
